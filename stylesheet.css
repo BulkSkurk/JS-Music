@@ -1,3 +1,15 @@
+:root {
+  --stripe-animation-duration: 15s;
+}
+body {
+  margin-left: 0px;
+  overflow: hidden;
+}
+.cool-text-p {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin-left: 2rem;
+}
+/*---- Box Rainbow ----*/
 @keyframes spinner-animation {
   0% {
     box-shadow: 0px 0px 0px 10px rgb(190, 65, 65), 0px 0px 0px 20px rgb(229, 180, 83),
@@ -52,7 +64,62 @@
   animation-iteration-count: infinite;
   animation-delay: 2s;
 }
-.cool-text-p {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  margin-left: 2rem;
+
+/*---- Bottom Rainbow ----*/
+.rainbow-line-wrapper {
+  position: absolute;
+  bottom: 10%;
+
+  height: 0%;
+  width: 100%;
+}
+.stripe {
+  height: 15px;
+  width: 100%;
+
+  overflow: hidden;
+}
+.stripe-red {
+  background-color: rgb(190, 65, 65);
+  animation: moveDot var(--stripe-animation-duration) linear infinite;
+  animation-delay: 100ms;
+}
+.stripe-yellow {
+  background-color: rgb(229, 180, 83);
+  animation: moveDot var(--stripe-animation-duration) linear infinite;
+  animation-delay: 150ms;
+}
+.stripe-white {
+  background-color: rgb(238, 237, 236);
+  animation: moveDot var(--stripe-animation-duration) linear infinite;
+  animation-delay: 200ms;
+}
+.stripe-bright-blue {
+  background-color: rgb(84, 197, 212);
+  animation: moveDot var(--stripe-animation-duration) linear infinite;
+  animation-delay: 250ms;
+}
+.stripe-light-blue {
+  background-color: rgb(68, 160, 172);
+  animation: moveDot var(--stripe-animation-duration) linear infinite;
+  animation-delay: 300ms;
+}
+
+.moving-dot {
+  display: inline-block;
+  position: absolute;
+  width: 80%;
+  height: 15px;
+
+  border-radius: 25px;
+}
+
+@keyframes moveDot {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 1000%;
+    transform: translateX(-1000%);
+  }
 }
