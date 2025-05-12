@@ -10,6 +10,15 @@ body {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   margin-left: 2rem;
 }
+.spotify-window {
+  height: 60%;
+  width: 90%;
+  margin-top: 1rem;
+
+  display: flex;
+  align-self: center;
+  justify-self: center;
+}
 /*---- Box Rainbow ----*/
 @keyframes spinner-animation {
   0% {
