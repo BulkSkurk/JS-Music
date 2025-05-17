@@ -5,35 +5,74 @@
 body {
   margin-left: 0px;
   overflow: hidden;
+
+  background-color: rgb(144, 50, 50);
 }
 .cool-text-p {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   margin-left: 2rem;
 }
 .spotify-window {
-  height: 60%;
+  height: 70%;
   width: 90%;
   margin-top: 1rem;
 
   display: flex;
   align-self: center;
+
+  border: 8px solid rgb(190, 65, 65);
+  border-radius: 10px;
 }
 .player-controls {
   display: flex;
   flex-direction: row;
 
   align-self: center;
-  margin-top: 6rem;
+  margin-top: 2rem;
 }
 .player-controls img {
   height: 50px;
   width: 50px;
+  margin: 0 10px;
+}
+.player-controls img:hover {
+  height: 90%;
+  width: 90%;
+
+  box-shadow: 0px 0px 0px 1px rgb(68, 160, 172), 0px 0px 0px 2px rgb(190, 65, 65),
+    0px 0px 0px 3px rgb(229, 180, 83), 0px 0px 0px 4px rgb(238, 237, 236),
+    0px 0px 0px 5px rgb(84, 197, 212);
+
+  border-radius: 12px;
 }
 .player-controls .smaller-btn img {
   height: 35px;
   width: 35px;
   padding-top: 0.5rem;
 }
+.user-login {
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+}
+.user-login .backdrop-crayon {
+  position: absolute;
+  left: 0rem;
+  top: -1rem;
+  height: 100px;
+  width: 100px;
+
+  z-index: -1;
+  pointer-events: none;
+  transform: rotate(15deg);
+}
+.user-login img {
+  z-index: 1;
+
+  height: 75px;
+  width: 75px;
+}
+
 /*---- Box Rainbow ----*/
 @keyframes spinner-animation {
   0% {
