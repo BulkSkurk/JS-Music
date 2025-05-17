@@ -17,7 +17,17 @@ body {
 
   display: flex;
   align-self: center;
-  justify-self: center;
+}
+.player-controls {
+  display: flex;
+  flex-direction: row;
+
+  align-self: center;
+  margin-top: 6rem;
+}
+.player-controls img {
+  height: 50px;
+  width: 50px;
 }
 /*---- Box Rainbow ----*/
 @keyframes spinner-animation {
