@@ -29,6 +29,11 @@ body {
   height: 50px;
   width: 50px;
 }
+.player-controls .smaller-btn img {
+  height: 35px;
+  width: 35px;
+  padding-top: 0.5rem;
+}
 /*---- Box Rainbow ----*/
 @keyframes spinner-animation {
   0% {
