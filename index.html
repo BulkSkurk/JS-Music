@@ -3,7 +3,39 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Random Music Player</title>
+    <link rel="stylesheet" href="stylesheet.css" />
   </head>
-  <body></body>
+  <body>
+    <div class="user-login">
+      <img src="./img/icons8-user-icon-100.png" />
+      <img class="backdrop-crayon" src="./img/crayon.png" />
+    </div>
+    <div class="colorful-div">
+      <div class="spotify-window"></div>
+      <div class="player-controls">
+        <a class="smaller-btn" href="#"
+          ><img class="smaller-btn" src="./img/icons8-shuffle-50.png"
+        /></a>
+        <a href="#"><img src="./img/icons8-skip-to-start-50.png" /></a>
+        <a href="#"><img src="./img/icons8-circled-play-button-50.png" /></a>
+        <a href="#"><img src="./img/icons8-end-50.png" /></a>
+        <a class="smaller-btn" href="#"><img src="./img/icons8-repeat-50.png" /></a>
+      </div>
+      <div class="player-controls lower-row">
+        <img src="./img/icons8-sample-rate-100.png" />
+      </div>
+      <div class="player-controls lower-row right-mute"><img src="./img/icons8-mute-48.png" /></div>
+    </div>
+  </body>
+  <footer>
+    <div class="rainbow-line-wrapper">
+      <div class="stripe"><span class="moving-dot stripe-red"></span></div>
+      <div class="stripe"><span class="moving-dot stripe-yellow"></span></div>
+      <div class="stripe"><span class="moving-dot stripe-white"></span></div>
+      <div class="stripe"><span class="moving-dot stripe-bright-blue"></span></div>
+      <div class="stripe"><span class="moving-dot stripe-light-blue"></span></div>
+    </div>
+    <toast><div class="toast-msg"></div></toast>
+  </footer>
 </html>
