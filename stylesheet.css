@@ -36,9 +36,6 @@ body {
   margin: 0 10px;
 }
 .player-controls img:hover {
-  height: 90%;
-  width: 90%;
-
   box-shadow: 0px 0px 0px 1px rgb(68, 160, 172), 0px 0px 0px 2px rgb(190, 65, 65),
     0px 0px 0px 3px rgb(229, 180, 83), 0px 0px 0px 4px rgb(238, 237, 236),
     0px 0px 0px 5px rgb(84, 197, 212);
@@ -49,6 +46,13 @@ body {
   height: 35px;
   width: 35px;
   padding-top: 0.5rem;
+}
+.lower-row {
+  margin-top: 0;
+}
+.lower-row.right-mute {
+  margin-left: auto;
+  margin-bottom: 1rem;
 }
 .user-login {
   position: absolute;
