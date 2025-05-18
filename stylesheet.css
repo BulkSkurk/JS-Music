@@ -8,10 +8,17 @@ body {
 
   background-color: rgb(144, 50, 50);
 }
-.cool-text-p {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  margin-left: 2rem;
+p {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva,
+    Verdana, sans-serif;
 }
+/*---- Navbar Settings ----*/
+.attached-navbar a {
+  text-decoration: none;
+  color: black;
+}
+
+/*---- Spotify Window ----*/
 .spotify-window {
   height: 70%;
   width: 90%;
@@ -54,6 +61,7 @@ body {
   margin-left: auto;
   margin-bottom: 1rem;
 }
+/*--- User Login ---*/
 .user-login {
   position: absolute;
   right: 2rem;
