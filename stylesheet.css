@@ -92,6 +92,20 @@ body {
     0px 0px 0px 15px rgb(238, 237, 236), 0px 0px 0px 20px rgb(84, 197, 212),
     0px 0px 0px 25px rgb(68, 160, 172);
 }
+.toast-body {
+  justify-self: center;
+
+  margin: 2rem 1rem;
+  padding: 1rem 1rem;
+
+  border: 5px ridge rgb(190, 65, 65);
+}
+.toast-msg {
+  color: rgb(238, 237, 236);
+
+  font-size: large;
+  font-weight: 600;
+}
 
 /*---- Box Rainbow ----*/
 @keyframes spinner-animation {
