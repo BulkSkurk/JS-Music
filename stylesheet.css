@@ -77,6 +77,36 @@ body {
   width: 75px;
 }
 
+/*---- Toast Window ----*/
+.toast {
+  position: absolute;
+  right: 10rem;
+  bottom: 10rem;
+
+  height: 10rem;
+  width: 25rem;
+
+  transform: rotate(-5deg);
+
+  box-shadow: 0px 0px 0px 5px rgb(190, 65, 65), 0px 0px 0px 10px rgb(229, 180, 83),
+    0px 0px 0px 15px rgb(238, 237, 236), 0px 0px 0px 20px rgb(84, 197, 212),
+    0px 0px 0px 25px rgb(68, 160, 172);
+}
+.toast-body {
+  justify-self: center;
+
+  margin: 2rem 1rem;
+  padding: 1rem 1rem;
+
+  border: 5px ridge rgb(190, 65, 65);
+}
+.toast-msg {
+  color: rgb(238, 237, 236);
+
+  font-size: large;
+  font-weight: 600;
+}
+
 /*---- Box Rainbow ----*/
 @keyframes spinner-animation {
   0% {
