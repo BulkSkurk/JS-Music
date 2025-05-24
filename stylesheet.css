@@ -1,6 +1,7 @@
 /*--- Reusable variables and basic settings ---*/
 :root {
   --stripe-animation-duration: 15s;
+  --navbar-animation-duration: 1s;
 
   --main-color-white: rgb(238, 237, 236);
   --main-color-red: rgb(190, 65, 65);
@@ -20,6 +21,9 @@ p {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva,
     Verdana, sans-serif;
 }
+.hidden {
+  opacity: 0;
+}
 /*---- Navbar Settings ----*/
 .attached-navbar {
   display: flex;
@@ -33,6 +37,11 @@ p {
   border-radius: 10px;
 
   background-color: var(--main-color-dark-red);
+  transform: translate(0%, 85%);
+}
+.attached-navbar:hover {
+  transform: translate(0%, 0%);
+  transition: transform 0.3s ease-in-out;
 }
 .attached-navbar a {
   text-decoration: none;
