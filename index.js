@@ -22,9 +22,9 @@ async function fetchWebApi(endpoint, method, body) {
   return await res.json();
 }
 
-async function getTopTracks() {
-  // Endpoint reference : https://developer.spotify.com/documentation/web-api/reference/get-users-top-artists-and-tracks
-  return (await fetchWebApi('v1/me/top/tracks?time_range=long_term&limit=5', 'GET')).items;
+async function getPlaylist(playlistId) {
+  let test = await fetchWebApi(`v1/playlists/${playlistId}`, 'GET').items;
+  console.log(test);
 }
 
 function addTemplateToAnyWindow(target, template) {
@@ -49,4 +49,26 @@ function setPlayerTemplate(playlistId) {
           >
         </iframe>    
     `;
+}
+
+function login() {
+  var redirect_uri = 'http://127.0.0.1:5500/callback';
+
+  var app = express();
+
+  app.get('/login', function (req, res) {
+    var state = generateRandomString(16);
+    var scope = 'user-read-private user-read-email';
+
+    res.redirect(
+      'https://accounts.spotify.com/authorize?' +
+        querystring.stringify({
+          response_type: 'code',
+          client_id: userToken.client_id,
+          scope: scope,
+          redirect_uri: redirect_uri,
+          state: state
+        })
+    );
+  });
 }
