@@ -9,12 +9,14 @@
   --main-color-bright-blue: rgb(84, 197, 212);
   --main-color-gold: rgb(229, 180, 83);
   --main-color-dark-red: rgb(118, 38, 38);
+  --main-color-dark-grey: rgb(53, 45, 45);
 }
 body {
   margin-left: 0px;
   overflow: hidden;
 
   background-color: rgb(144, 50, 50);
+  /* background-color: rgb(53, 45, 45); */
   /*Note to self, change these colors, it's too much man*/
 }
 p {
@@ -265,4 +267,35 @@ p {
     left: 1000%;
     transform: translateX(-1000%);
   }
+}
+
+/*---- Template CSS (Gets added to template's added from JavaScript) ----*/
+.playlists-navbar {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial,
+    sans-serif; /* Different Font for these */
+  font-size: larger;
+
+  background-color: var(--main-color-dark-grey);
+  padding-right: 1rem;
+
+  border-right: groove 10px gray;
+}
+.playlists-navbar a,
+p {
+  display: flex;
+
+  margin-left: 1rem;
+}
+.playlists-navbar a {
+  margin-top: 1rem;
+
+  text-decoration: none;
+  color: black;
+
+  transform: rotate(-5deg);
+}
+.playlists-navbar a:hover {
+  color: var(--main-color-white);
+
+  transform: rotate(-10deg);
 }
