@@ -1,7 +1,7 @@
 export const templates = {
   favorites: `
-    <div class="favorites-navbar">
-        <p>Choose an artist</p>
+    <div class="playlist-navbar">
+        <p>Choose a Playlist</p>
         <a href=# id="electric-bogaloo-list">Electric Bogaloo</a>
         <a href=# id="angeh-list">Angeh</a>
         <a href=# id="retro-modern-list">Retro-Modern</a>
@@ -12,7 +12,13 @@ export const templates = {
     </div>`
 };
 export const playlist_id = {
-  electric_bogaloo: '5IKrzhvvStUh1SSdPzvyU2'
+  electric_bogaloo: '5IKrzhvvStUh1SSdPzvyU2',
+  angeh: '60QEncV0rXXOb5AUABLWc7',
+  retro_modern: '0iGRxBeJ2ztYWNSJUskZcw',
+  my_top_tracks: '7Awq3e5oghi3Uc1hAVBHzg',
+  chill: '6euZIVXPYHKuRY1gz4Klka',
+  gym_metal_vibe: '0sKXadCXx9CJjki3WwDHJR',
+  chill_hip_hop: '7hVc5hIzqHP5yg165t58VQ'
 };
 
 export function setPlayerTemplate(playlistID) {

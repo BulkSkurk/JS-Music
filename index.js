@@ -25,9 +25,28 @@ function addTemplateToAnyWindow(target, template) {
   document.getElementsByClassName(target)[0].innerHTML = template;
 }
 function setPlaylistsTemplate() {
-  addTemplateToAnyWindow('spotify-window', templates.favorites);
+  const target = 'spotify-window';
+  addTemplateToAnyWindow(target, templates.favorites);
 
   document.getElementById('electric-bogaloo-list').addEventListener('click', () => {
-    addTemplateToAnyWindow('spotify-window', setPlayerTemplate(playlist_id.electric_bogaloo));
+    addTemplateToAnyWindow(target, setPlayerTemplate(playlist_id.electric_bogaloo));
+  });
+  document.getElementById('angeh-list').addEventListener('click', () => {
+    addTemplateToAnyWindow(target, setPlayerTemplate(playlist_id.angeh));
+  });
+  document.getElementById('retro-modern-list').addEventListener('click', () => {
+    addTemplateToAnyWindow(target, setPlayerTemplate(playlist_id.retro_modern));
+  });
+  document.getElementById('top-tracks-list').addEventListener('click', () => {
+    addTemplateToAnyWindow(target, setPlayerTemplate(playlist_id.my_top_tracks));
+  });
+  document.getElementById('chill-list').addEventListener('click', () => {
+    addTemplateToAnyWindow(target, setPlayerTemplate(playlist_id.chill));
+  });
+  document.getElementById('80s-gym-list').addEventListener('click', () => {
+    addTemplateToAnyWindow(target, setPlayerTemplate(playlist_id.gym_metal_vibe));
+  });
+  document.getElementById('chill-hiphop-list').addEventListener('click', () => {
+    addTemplateToAnyWindow(target, setPlayerTemplate(playlist_id.chill_hip_hop));
   });
 }

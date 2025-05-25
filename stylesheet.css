@@ -276,7 +276,7 @@ p {
 }
 
 /*---- Template CSS (Gets added to template's added from JavaScript) ----*/
-.favorites-navbar {
+.playlist-navbar {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial,
     sans-serif; /* Different Font for these */
   font-size: larger;
@@ -286,13 +286,13 @@ p {
 
   border-right: groove 10px gray;
 }
-.favorites-navbar a,
+.playlist-navbar a,
 p {
   display: flex;
 
   margin-left: 1rem;
 }
-.favorites-navbar a {
+.playlist-navbar a {
   margin-top: 1rem;
 
   text-decoration: none;
@@ -300,7 +300,7 @@ p {
 
   transform: rotate(-5deg);
 }
-.favorites-navbar a:hover {
+.playlist-navbar a:hover {
   color: var(--main-color-white);
 
   transform: rotate(-10deg);
