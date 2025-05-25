@@ -7,41 +7,51 @@
     <link rel="stylesheet" href="stylesheet.css" />
   </head>
   <body>
-    <div class="user-login">
-      <img src="./img/icons8-user-icon-100.png" />
+    <div class="user-theme">
+      <img class="theme-btn" src="./img/icons8-user-icon-100.png" />
       <img class="backdrop-crayon" src="./img/crayon.png" />
     </div>
-    <div class="colorful-div">
-      <div class="spotify-window"></div>
-      <div class="player-controls">
-        <a class="smaller-btn" href="#"
-          ><img class="smaller-btn" src="./img/icons8-shuffle-50.png"
-        /></a>
-        <a href="#"><img src="./img/icons8-skip-to-start-50.png" /></a>
-        <a href="#"><img src="./img/icons8-circled-play-button-50.png" /></a>
-        <a href="#"><img src="./img/icons8-end-50.png" /></a>
-        <a class="smaller-btn" href="#"><img src="./img/icons8-repeat-50.png" /></a>
+    <div class="player-wrapper">
+      <div class="attached-navbar">
+        <a href="#" id="top-songs-btn">Top-Songs</a>
+        <a href="#" id="playlists-btn">Playlists</a>
+        <a href="#" id="links-btn">Links</a>
       </div>
-      <div class="player-controls lower-row">
-        <img src="./img/icons8-sample-rate-100.png" />
+      <div class="colorful-div">
+        <div class="spotify-window"></div>
+        <div class="player-controls">
+          <a class="smaller-btn" href="#"
+            ><img class="smaller-btn" src="./img/icons8-shuffle-50.png"
+          /></a>
+          <a href="#"><img src="./img/icons8-skip-to-start-50.png" /></a>
+          <a href="#"><img src="./img/icons8-circled-play-button-50.png" /></a>
+          <a href="#"><img src="./img/icons8-end-50.png" /></a>
+          <a class="smaller-btn" href="#"><img src="./img/icons8-repeat-50.png" /></a>
+        </div>
+        <div class="player-controls lower-row">
+          <img src="./img/icons8-sample-rate-100.png" />
+        </div>
+        <div class="player-controls lower-row right-mute">
+          <img src="./img/icons8-mute-48.png" />
+        </div>
       </div>
-      <div class="player-controls lower-row right-mute"><img src="./img/icons8-mute-48.png" /></div>
     </div>
   </body>
   <footer>
-    <div class="rainbow-line-wrapper">
+    <div class="rainbow-line-wrapper hidden">
       <div class="stripe"><span class="moving-dot stripe-red"></span></div>
       <div class="stripe"><span class="moving-dot stripe-yellow"></span></div>
       <div class="stripe"><span class="moving-dot stripe-white"></span></div>
       <div class="stripe"><span class="moving-dot stripe-bright-blue"></span></div>
       <div class="stripe"><span class="moving-dot stripe-light-blue"></span></div>
     </div>
-    <div class="toast">
+    <div class="toast hidden">
       <div class="toast-body">
         <div class="toast-msg">
           <p>A Message! How prominent indeed!</p>
         </div>
       </div>
     </div>
+    <script type="module" src="index.js"></script>
   </footer>
 </html>

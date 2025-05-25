@@ -1,17 +1,63 @@
 /*--- Reusable variables and basic settings ---*/
 :root {
   --stripe-animation-duration: 15s;
+  --navbar-animation-duration: 1s;
+
+  --main-color-white: rgb(238, 237, 236);
+  --main-color-red: rgb(190, 65, 65);
+  --main-color-blue: rgb(68, 160, 172);
+  --main-color-bright-blue: rgb(84, 197, 212);
+  --main-color-gold: rgb(229, 180, 83);
+  --main-color-dark-red: rgb(118, 38, 38);
+  --main-color-dark-grey: rgb(53, 45, 45);
 }
 body {
   margin-left: 0px;
   overflow: hidden;
 
   background-color: rgb(144, 50, 50);
+  /* background-color: rgb(53, 45, 45); */
+  /*Note to self, change these colors, it's too much man*/
 }
-.cool-text-p {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  margin-left: 2rem;
+p {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva,
+    Verdana, sans-serif;
 }
+.hidden {
+  display: none;
+}
+/*---- Navbar Settings ----*/
+.attached-navbar {
+  display: flex;
+  justify-self: center;
+  gap: 2em;
+
+  margin-top: 8em;
+  border-left: groove 5px var(--main-color-white);
+  border-right: groove 5px var(--main-color-white);
+  border-top: double 5px var(--main-color-white);
+  border-radius: 10px;
+
+  background-color: var(--main-color-dark-red);
+  transform: translate(0%, 85%);
+}
+.attached-navbar:hover {
+  transform: translate(0%, 0%);
+  transition: transform 0.3s ease-in-out;
+}
+.attached-navbar a {
+  text-decoration: none;
+  color: black;
+  font-size: 2em;
+  font-weight: 600;
+
+  padding: 0 1rem;
+}
+.attached-navbar a:hover {
+  color: var(--main-color-white);
+}
+
+/*---- Spotify Window ----*/
 .spotify-window {
   height: 70%;
   width: 90%;
@@ -20,7 +66,7 @@ body {
   display: flex;
   align-self: center;
 
-  border: 8px solid rgb(190, 65, 65);
+  border: 8px groove var(--main-color-white);
   border-radius: 10px;
 }
 .player-controls {
@@ -36,9 +82,7 @@ body {
   margin: 0 10px;
 }
 .player-controls img:hover {
-  box-shadow: 0px 0px 0px 1px rgb(68, 160, 172), 0px 0px 0px 2px rgb(190, 65, 65),
-    0px 0px 0px 3px rgb(229, 180, 83), 0px 0px 0px 4px rgb(238, 237, 236),
-    0px 0px 0px 5px rgb(84, 197, 212);
+  box-shadow: 0px 0px 0px 4px var(--main-color-white);
 
   border-radius: 12px;
 }
@@ -54,12 +98,13 @@ body {
   margin-left: auto;
   margin-bottom: 1rem;
 }
-.user-login {
+/*--- User Login ---*/
+.user-theme {
   position: absolute;
   right: 2rem;
   top: 2rem;
 }
-.user-login .backdrop-crayon {
+.user-theme .backdrop-crayon {
   position: absolute;
   left: 0rem;
   top: -1rem;
@@ -70,11 +115,17 @@ body {
   pointer-events: none;
   transform: rotate(15deg);
 }
-.user-login img {
+.user-theme img {
   z-index: 1;
 
   height: 75px;
   width: 75px;
+}
+.backdrop-crayon {
+  display: none;
+}
+.theme-btn:hover + .backdrop-crayon {
+  display: flex;
 }
 
 /*---- Toast Window ----*/
@@ -88,9 +139,9 @@ body {
 
   transform: rotate(-5deg);
 
-  box-shadow: 0px 0px 0px 5px rgb(190, 65, 65), 0px 0px 0px 10px rgb(229, 180, 83),
-    0px 0px 0px 15px rgb(238, 237, 236), 0px 0px 0px 20px rgb(84, 197, 212),
-    0px 0px 0px 25px rgb(68, 160, 172);
+  box-shadow: 0px 0px 0px 5px var(--main-color-red), 0px 0px 0px 10px var(--main-color-gold),
+    0px 0px 0px 15px var(--main-color-white), 0px 0px 0px 20px var(--main-color-bright-blue),
+    0px 0px 0px 25px var(--main-color-blue);
 }
 .toast-body {
   justify-self: center;
@@ -98,10 +149,10 @@ body {
   margin: 2rem 1rem;
   padding: 1rem 1rem;
 
-  border: 5px ridge rgb(190, 65, 65);
+  border: 5px ridge var(--main-color-red);
 }
 .toast-msg {
-  color: rgb(238, 237, 236);
+  color: var(--main-color-white);
 
   font-size: large;
   font-weight: 600;
@@ -110,35 +161,35 @@ body {
 /*---- Box Rainbow ----*/
 @keyframes spinner-animation {
   0% {
-    box-shadow: 0px 0px 0px 10px rgb(190, 65, 65), 0px 0px 0px 20px rgb(229, 180, 83),
-      0px 0px 0px 30px rgb(238, 237, 236), 0px 0px 0px 40px rgb(84, 197, 212),
-      0px 0px 0px 50px rgb(68, 160, 172);
+    box-shadow: 0px 0px 0px 10px var(--main-color-red), 0px 0px 0px 20px var(--main-color-gold),
+      0px 0px 0px 30px var(--main-color-white), 0px 0px 0px 40px var(--main-color-bright-blue),
+      0px 0px 0px 50px var(--main-color-blue);
   }
 
   20% {
-    box-shadow: 0px 0px 0px 10px rgb(68, 160, 172), 0px 0px 0px 20px rgb(190, 65, 65),
-      0px 0px 0px 30px rgb(229, 180, 83), 0px 0px 0px 40px rgb(238, 237, 236),
-      0px 0px 0px 50px rgb(84, 197, 212);
+    box-shadow: 0px 0px 0px 10px var(--main-color-blue), 0px 0px 0px 20px var(--main-color-red),
+      0px 0px 0px 30px var(--main-color-gold), 0px 0px 0px 40px var(--main-color-white),
+      0px 0px 0px 50px var(--main-color-bright-blue);
   }
   40% {
-    box-shadow: 0px 0px 0px 10px rgb(84, 197, 212), 0px 0px 0px 20px rgb(68, 160, 172),
-      0px 0px 0px 30px rgb(190, 65, 65), 0px 0px 0px 40px rgb(229, 180, 83),
-      0px 0px 0px 50px rgb(238, 237, 236);
+    box-shadow: 0px 0px 0px 10px var(--main-color-bright-blue),
+      0px 0px 0px 20px var(--main-color-blue), 0px 0px 0px 30px var(--main-color-red),
+      0px 0px 0px 40px var(--main-color-gold), 0px 0px 0px 50px var(--main-color-white);
   }
   60% {
-    box-shadow: 0px 0px 0px 10px rgb(238, 237, 236), 0px 0px 0px 20px rgb(84, 197, 212),
-      0px 0px 0px 30px rgb(68, 160, 172), 0px 0px 0px 40px rgb(190, 65, 65),
-      0px 0px 0px 50px rgb(229, 180, 83);
+    box-shadow: 0px 0px 0px 10px var(--main-color-white),
+      0px 0px 0px 20px var(--main-color-bright-blue), 0px 0px 0px 30px var(--main-color-blue),
+      0px 0px 0px 40px var(--main-color-red), 0px 0px 0px 50px var(--main-color-gold);
   }
   80% {
-    box-shadow: 0px 0px 0px 10px rgb(229, 180, 83), 0px 0px 0px 20px rgb(238, 237, 236),
-      0px 0px 0px 30px rgb(84, 197, 212), 0px 0px 0px 40px rgb(68, 160, 172),
-      0px 0px 0px 50px rgb(190, 65, 65);
+    box-shadow: 0px 0px 0px 10px var(--main-color-gold), 0px 0px 0px 20px var(--main-color-white),
+      0px 0px 0px 30px var(--main-color-bright-blue), 0px 0px 0px 40px var(--main-color-blue),
+      0px 0px 0px 50px var(--main-color-red);
   }
   100% {
-    box-shadow: 0px 0px 0px 10px rgb(190, 65, 65), 0px 0px 0px 20px rgb(229, 180, 83),
-      0px 0px 0px 30px rgb(238, 237, 236), 0px 0px 0px 40px rgb(84, 197, 212),
-      0px 0px 0px 50px rgb(68, 160, 172);
+    box-shadow: 0px 0px 0px 10px var(--main-color-red), 0px 0px 0px 20px var(--main-color-gold),
+      0px 0px 0px 30px var(--main-color-white), 0px 0px 0px 40px var(--main-color-bright-blue),
+      0px 0px 0px 50px var(--main-color-blue);
   }
 }
 
@@ -153,9 +204,11 @@ body {
   width: 30%;
   border-radius: 5px;
 
-  box-shadow: 0px 0px 0px 10px rgb(190, 65, 65), 0px 0px 0px 20px rgb(229, 180, 83),
-    0px 0px 0px 30px rgb(238, 237, 236), 0px 0px 0px 40px rgb(84, 197, 212),
-    0px 0px 0px 50px rgb(68, 160, 172);
+  background-color: var(--main-color-dark-red);
+
+  box-shadow: 0px 0px 0px 10px var(--main-color-red), 0px 0px 0px 20px var(--main-color-gold),
+    0px 0px 0px 30px var(--main-color-white), 0px 0px 0px 40px var(--main-color-bright-blue),
+    0px 0px 0px 50px var(--main-color-blue);
 
   animation-name: spinner-animation;
   animation-duration: 4s;
@@ -178,27 +231,27 @@ body {
   overflow: hidden;
 }
 .stripe-red {
-  background-color: rgb(190, 65, 65);
+  background-color: var(--main-color-red);
   animation: moveDot var(--stripe-animation-duration) linear infinite;
   animation-delay: 100ms;
 }
 .stripe-yellow {
-  background-color: rgb(229, 180, 83);
+  background-color: var(--main-color-gold);
   animation: moveDot var(--stripe-animation-duration) linear infinite;
   animation-delay: 150ms;
 }
 .stripe-white {
-  background-color: rgb(238, 237, 236);
+  background-color: var(--main-color-white);
   animation: moveDot var(--stripe-animation-duration) linear infinite;
   animation-delay: 200ms;
 }
 .stripe-bright-blue {
-  background-color: rgb(84, 197, 212);
+  background-color: var(--main-color-bright-blue);
   animation: moveDot var(--stripe-animation-duration) linear infinite;
   animation-delay: 250ms;
 }
 .stripe-light-blue {
-  background-color: rgb(68, 160, 172);
+  background-color: var(--main-color-blue);
   animation: moveDot var(--stripe-animation-duration) linear infinite;
   animation-delay: 300ms;
 }
@@ -220,4 +273,35 @@ body {
     left: 1000%;
     transform: translateX(-1000%);
   }
+}
+
+/*---- Template CSS (Gets added to template's added from JavaScript) ----*/
+.playlist-navbar {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial,
+    sans-serif; /* Different Font for these */
+  font-size: larger;
+
+  background-color: var(--main-color-dark-grey);
+  padding-right: 1rem;
+
+  border-right: groove 10px gray;
+}
+.playlist-navbar a,
+p {
+  display: flex;
+
+  margin-left: 1rem;
+}
+.playlist-navbar a {
+  margin-top: 1rem;
+
+  text-decoration: none;
+  color: black;
+
+  transform: rotate(-5deg);
+}
+.playlist-navbar a:hover {
+  color: var(--main-color-white);
+
+  transform: rotate(-10deg);
 }
