@@ -24,6 +24,8 @@ export const templates = {
         <p>Prop Dylan</p>
         <a href=# id="lateralus">Lateralus</a>
         <p>Tool</p>
+        <a href=# id="chkdsk">CHKDSK</a>
+        <p>MASTER BOOT RECORD</p>
     </div>
     `
 };
@@ -42,7 +44,8 @@ export const album_id = {
   nija: '7ebnxkx8HZNvtTB3me1S9C',
   skeleta: '37a1ehu3HGYPA07QFvWIsL',
   garbage_pail_kid: '2tczZ8ZZKYwSfKUaew8Bse',
-  lateralus: '5l5m1hnH4punS1GQXgEi3T'
+  lateralus: '5l5m1hnH4punS1GQXgEi3T',
+  chkdsk: '1ymuJCekHsFQpPFHw9nsy3'
 };
 
 export const endpoint_paths = {

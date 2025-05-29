@@ -38,7 +38,6 @@ async function fetchWebApi(endpoint, method) {
   return await res.json();
 }
 async function fetchWebApiToken(endpoint, method, body) {
-  console.log(endpoint);
   const res = await fetch(`https://accounts.spotify.com/${endpoint}`, {
     headers: {
       'Content-Type': 'application/x-www-form-urlencoded'
@@ -65,6 +64,7 @@ function attachAlbumEventListeners(target) {
   setAlbumConentsById('skeleta', target, album_id.skeleta);
   setAlbumConentsById('a-garbage-pail-kid', target, album_id.garbage_pail_kid);
   setAlbumConentsById('lateralus', target, album_id.lateralus);
+  setAlbumConentsById('chkdsk', target, album_id.chkdsk);
 }
 function attachPlaylistEventListeners(target) {
   setIframeConentsById('electric-bogaloo-list', target, playlist_id.electric_bogaloo);
@@ -98,8 +98,6 @@ async function setAlbumTemplate(albumId) {
     songs.push('<p>' + song.name.replace('.', '') + '</p>');
   }
 
-  console.log(songs.join(''));
-
   return `
         <div class="playlist-navbar">
         <p>Choose an album</p>
@@ -113,19 +111,36 @@ async function setAlbumTemplate(albumId) {
         <p>Prop Dylan</p>
         <a href=# id="lateralus">Lateralus</a>
         <p>Tool</p>
+        <a href=# id="chkdsk">CHKDSK</a>
+        <p>MASTER BOOT RECORD</p>
     </div>
     <div class="album-info">
       <img src="${response.images[0].url}" id="album-cover" />
-      <h2>${response.name}</h2>
         <div class ="artist-info">
+          <h2>${response.name}</h2>
           <p>Artist: ${response.artists[0].name}</p>
           <p>Label: ${response.label}</p>
+          <p>Release Date: ${response.release_date}</p>
+          <p>No.Tracks: ${response.total_tracks}</p>
+          <p>Listen on spotify:<a href=${
+            response.external_urls.spotify
+          }><img src="./img/Spotify_logo.webp" id="spotify-logo"></a></p>
         </div>
       <div class ="songs-list">
         <p>Songs</p>
         ${songs.join('')}
       </div>
-      
     </div>
+    <div>
+            <iframe
+            title="Spotify Embed: Recommendation Playlist"
+            src="https://open.spotify.com/embed/album/${response.id}?utm_source=generator"
+            width="100%"
+            height="100%"
+            frameborder="0"
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy">
+        </iframe>      
+        </div>
     `;
 }
