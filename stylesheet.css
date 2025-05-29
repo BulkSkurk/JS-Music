@@ -16,8 +16,6 @@ body {
   overflow: hidden;
 
   background-color: rgb(144, 50, 50);
-  /* background-color: rgb(53, 45, 45); */
-  /*Note to self, change these colors, it's too much man*/
 }
 p {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva,
@@ -304,4 +302,25 @@ p {
   color: var(--main-color-white);
 
   transform: rotate(-10deg);
+}
+.playlist-navbar p {
+  font-size: small;
+}
+
+/*---- Album Info ----*/
+#album-cover {
+  height: 10rem;
+  width: 10rem;
+
+  border: groove gray 5px;
+}
+.album-info {
+  margin: 1rem 1rem;
+}
+.songs-list p {
+  margin: 0 0;
+}
+.artist-info p {
+  font-weight: 800;
+  margin: 0 0;
 }
