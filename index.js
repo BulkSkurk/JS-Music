@@ -100,7 +100,6 @@ function setAlbumConentsById(elementId, target, albumId) {
 }
 async function setAlbumTemplate(albumId) {
   const response = await fetchWebApi(endpoint_paths.albums + albumId, 'GET');
-  console.log(response);
 
   let songs = [];
 
