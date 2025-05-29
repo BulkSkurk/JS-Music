@@ -16,8 +16,6 @@ body {
   overflow: hidden;
 
   background-color: rgb(144, 50, 50);
-  /* background-color: rgb(53, 45, 45); */
-  /*Note to self, change these colors, it's too much man*/
 }
 p {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva,
@@ -33,6 +31,8 @@ p {
   gap: 2em;
 
   margin-top: 8em;
+  margin-left: 15rem;
+
   border-left: groove 5px var(--main-color-white);
   border-right: groove 5px var(--main-color-white);
   border-top: double 5px var(--main-color-white);
@@ -59,7 +59,7 @@ p {
 
 /*---- Spotify Window ----*/
 .spotify-window {
-  height: 70%;
+  height: 90%;
   width: 90%;
   margin-top: 1rem;
 
@@ -68,35 +68,6 @@ p {
 
   border: 8px groove var(--main-color-white);
   border-radius: 10px;
-}
-.player-controls {
-  display: flex;
-  flex-direction: row;
-
-  align-self: center;
-  margin-top: 2rem;
-}
-.player-controls img {
-  height: 50px;
-  width: 50px;
-  margin: 0 10px;
-}
-.player-controls img:hover {
-  box-shadow: 0px 0px 0px 4px var(--main-color-white);
-
-  border-radius: 12px;
-}
-.player-controls .smaller-btn img {
-  height: 35px;
-  width: 35px;
-  padding-top: 0.5rem;
-}
-.lower-row {
-  margin-top: 0;
-}
-.lower-row.right-mute {
-  margin-left: auto;
-  margin-bottom: 1rem;
 }
 /*--- User Login ---*/
 .user-theme {
@@ -118,7 +89,7 @@ p {
 .user-theme img {
   z-index: 1;
 
-  height: 75px;
+  height: 100px;
   width: 75px;
 }
 .backdrop-crayon {
@@ -142,6 +113,30 @@ p {
   box-shadow: 0px 0px 0px 5px var(--main-color-red), 0px 0px 0px 10px var(--main-color-gold),
     0px 0px 0px 15px var(--main-color-white), 0px 0px 0px 20px var(--main-color-bright-blue),
     0px 0px 0px 25px var(--main-color-blue);
+
+  animation-name: toast-animation, spinner-animation;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+@keyframes toast-animation {
+  0% {
+    transform: rotate(360deg);
+  }
+  20% {
+    transform: rotate(180deg);
+  }
+  40% {
+    transform: rotate(0deg);
+  }
+  60% {
+    transform: rotate(-180deg);
+  }
+  80% {
+    transform: rotate(-180deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
 .toast-body {
   justify-self: center;
@@ -201,7 +196,7 @@ p {
   flex-direction: column;
 
   height: 60%;
-  width: 30%;
+  width: 40%;
   border-radius: 5px;
 
   background-color: var(--main-color-dark-red);
@@ -285,6 +280,7 @@ p {
   padding-right: 1rem;
 
   border-right: groove 10px gray;
+  overflow: hidden;
 }
 .playlist-navbar a,
 p {
@@ -304,4 +300,61 @@ p {
   color: var(--main-color-white);
 
   transform: rotate(-10deg);
+}
+.playlist-navbar p {
+  font-size: small;
+}
+
+/*---- Album Info ----*/
+#album-cover {
+  height: 10rem;
+  width: 10rem;
+
+  border: groove gray 5px;
+}
+.album-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 1rem;
+
+  overflow: hidden;
+}
+.songs-list {
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+}
+.songs-list p {
+  margin: 0 1rem;
+}
+.songs-list p:first-child {
+  font-weight: 800;
+}
+.artist-info {
+  margin-left: 1rem;
+}
+.artist-info p {
+  font-weight: 800;
+  margin: 0 0;
+}
+#spotify-logo {
+  margin-left: 1rem;
+  height: 25px;
+  width: 25px;
+}
+.links a {
+  display: flex;
+  text-decoration: none;
+
+  font-size: 2rem;
+  font-weight: 800;
+
+  color: black;
+
+  margin: 2rem;
+}
+.links a:hover {
+  color: var(--main-color-white);
 }
