@@ -27,7 +27,15 @@ export const templates = {
         <a href=# id="chkdsk">CHKDSK</a>
         <p>MASTER BOOT RECORD</p>
     </div>
-    `
+    `,
+  links: `
+  <div class="links">
+  <a href="https://open.spotify.com/">Spotify - Spotify Main Page</a>
+  <a href="https://developer.spotify.com/documentation/web-api">Spotify API Docs - Documentation on how to use Spotify API</a>
+  <a href="https://forge-dev-init.atlassian.net/jira/software/c/projects/MP/boards/36">Jira - Depracted Jira Board</a>
+  <a href="https://github.com/BulkSkurk/JS-Music">Git - Git Repository</a>
+  </div>
+  `
 };
 export const playlist_id = {
   electric_bogaloo: '5IKrzhvvStUh1SSdPzvyU2',

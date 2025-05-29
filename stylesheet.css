@@ -113,6 +113,30 @@ p {
   box-shadow: 0px 0px 0px 5px var(--main-color-red), 0px 0px 0px 10px var(--main-color-gold),
     0px 0px 0px 15px var(--main-color-white), 0px 0px 0px 20px var(--main-color-bright-blue),
     0px 0px 0px 25px var(--main-color-blue);
+
+  animation-name: toast-animation, spinner-animation;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+@keyframes toast-animation {
+  0% {
+    transform: rotate(360deg);
+  }
+  20% {
+    transform: rotate(180deg);
+  }
+  40% {
+    transform: rotate(0deg);
+  }
+  60% {
+    transform: rotate(-180deg);
+  }
+  80% {
+    transform: rotate(-180deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
 .toast-body {
   justify-self: center;
@@ -319,4 +343,18 @@ p {
   margin-left: 1rem;
   height: 25px;
   width: 25px;
+}
+.links a {
+  display: flex;
+  text-decoration: none;
+
+  font-size: 2rem;
+  font-weight: 800;
+
+  color: black;
+
+  margin: 2rem;
+}
+.links a:hover {
+  color: var(--main-color-white);
 }

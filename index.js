@@ -17,6 +17,17 @@ function setButtonListeners() {
   document.getElementById('top-albums-btn').addEventListener('click', () => {
     addTemplateToAlbumWindow('spotify-window', templates.favorite_albums);
   });
+  document.getElementById('links-btn').addEventListener('click', () => {
+    addTemplateToAlbumWindow('spotify-window', templates.links);
+  });
+  const btn = document.getElementsByClassName('theme-btn')[0];
+  const rainbow = document.getElementsByClassName('rainbow-line-wrapper')[0];
+  const toast = document.getElementsByClassName('toast')[0];
+
+  btn.addEventListener('click', () => {
+    rainbow.classList.toggle('hidden');
+    toast.classList.toggle('hidden');
+  });
 }
 
 async function getApiToken() {
@@ -47,7 +58,6 @@ async function fetchWebApiToken(endpoint, method, body) {
   });
   return await res.json();
 }
-
 function addTemplateToPlaylistWindow(target, template) {
   document.getElementsByClassName(target)[0].innerHTML = template;
 
